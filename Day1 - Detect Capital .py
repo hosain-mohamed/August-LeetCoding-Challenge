@@ -1,14 +1,14 @@
 x = "USA"
 def checkCapital(x : str)-> bool:
     if len(x) < 2 : return True
-    if(not x[0].islower() and not x[1].islower()):
+    if(x[0].isupper() and x[1].isupper()):
         for l in x[2:]:
             if l.islower():
                 return False
         else : return True
     else :
         for l in x[1:]:
-            if not l.islower():
+            if  l.isupper():
                 return False
         else : return True    
 print(checkCapital(x))
